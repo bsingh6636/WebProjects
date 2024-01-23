@@ -1,7 +1,7 @@
 
     * {
-        background-color: #333;
-        color: rgba(255, 248, 240, 0.863);
+        background-color: black;
+        color: whitesmoke ;
     }
     h1{
         text-align: center;
@@ -16,10 +16,20 @@
         display: flex;
         flex-wrap: wrap;
         margin-right: 2%;
-        font-size: x-large;
+        font-size: xxx-large;
+        border-radius: 50%;
+        border-color: red;
         
     }
     .buttons button{
-        font-size:x-large
+        font-size:xxx-large;
+        border-radius: 50%;
+        border-color: blue;
         
     } 
+    #startbtn{
+        border-radius: 100%;
+        border-color: blue;
+        border-top-left-radius: 0%;
+        
+    }

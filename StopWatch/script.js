@@ -1,50 +1,60 @@
 // const { start } = require("@popperjs/core");
-
+'use strict';
 var hr = document.querySelector("#hour");
 var min = document.querySelector("#min");
 var sec = document.querySelector("#sec")
-var mm = document.querySelector("#mm")
-var intervalId;
+// var mm = document.querySelector("#mm")
+        var intervalId;
 
-hr.innerHTML="00";
-min.innerHTML="00";
-sec.innerHTML="00";
-mm.innerHTML="00";
+        hr.innerHTML = "00";
+min.innerHTML = "00";
+sec.innerHTML = "00";
+        // mm.innerHTML="00";
 var secc = 0;
 var minn = 0;
 var hour = 0;
-var mmm = 0 ;
+// var mmm = 0 ;
 
 function starttimer(){
     secc ++;
-    sec.innerHTML=secc;
-    mmm =0;
-    if(secc === 60){
-        minn ++;
-        min.innerHTML=minn;
-        secc =0;
-      
-            if(minn === 60){
-                 hour++;
-                 hr.innerHTML=hour;
-                 min = 0;
+    if(secc<10)
+    {
+        sec.innerHTML="0" + secc;
     }
-}
+    else{
+        sec.innerHTML= secc;
+    }
+    
+    if (secc === 60){
+        minn ++;
+        secc = 0;
+        if(minn<10)
+            {
+        min.innerHTML="0" + minn;
+         }
+    else{
+        sec.innerHTML= minn;
+         } if (minn === 60){
+            hour++;
+            hr.innerHTML = hour;
+            min = 0;
+                         }
+            }
 }
 
 function start(){
-     intervalId = setInterval(starttimer,1000);
+    clearInterval(intervalId);
+    intervalId = setInterval(starttimer, 1000);
 }
 function stop(){
     clearInterval(intervalId);
 }
 function reset(){
 
-    hr.innerHTML="00";
-min.innerHTML="00";
-sec.innerHTML="00";
-mm.innerHTML="00";
-
+    hr.innerHTML = "00";
+min.innerHTML = "00";
+sec.innerHTML = "00";
+// mm.innerHTML="00";
 }
 
 
