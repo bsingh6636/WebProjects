@@ -1,0 +1,25 @@
+
+    * {
+        background-color: #333;
+        color: rgba(255, 248, 240, 0.863);
+    }
+    h1{
+        text-align: center;
+        font-size: xxx-large;
+    }
+    .inf , .timer , .buttons {
+        align-items: first baseline;
+        display: flex;
+        justify-content: center;
+    }
+    .inf p,.timer p{
+        display: flex;
+        flex-wrap: wrap;
+        margin-right: 2%;
+        font-size: x-large;
+        
+    }
+    .buttons button{
+        font-size:x-large
+        
+    } 
